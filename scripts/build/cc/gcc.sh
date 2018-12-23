@@ -587,7 +587,7 @@ do_gcc_core_backend() {
         --host=${host}                                 \
         --target=${CT_TARGET}                          \
         --prefix="${prefix}"                           \
-        --with-local-prefix="${CT_SYSROOT_DIR}"        \
+        --with-local-prefix="/."                       \
         "${extra_config[@]}"                           \
         --enable-languages="${lang_list}"              \
         "${extra_user_config[@]}"
@@ -1146,7 +1146,7 @@ do_gcc_backend() {
         --prefix="${prefix}"                           \
         ${CT_CC_SYSROOT_ARG}                           \
         "${extra_config[@]}"                           \
-        --with-local-prefix="${CT_SYSROOT_DIR}"        \
+        --with-local-prefix="/."                       \
         --enable-long-long                             \
         "${CT_CC_GCC_EXTRA_CONFIG_ARRAY[@]}"
 
